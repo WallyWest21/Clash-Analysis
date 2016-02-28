@@ -1,0 +1,96 @@
+﻿<Window x:Name="win_MainWindow" x:Class="MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Clash_Analysis"
+        mc:Ignorable="d"
+        Title="Clash Analysis" Height="300" MinHeight="300"  MinWidth=" 300" Width="300" SizeToContent="Height" Topmost="True">
+
+    <Window.Resources>
+
+        <DataTemplate x:Key="NotesTemplate">
+            <Grid  HorizontalAlignment="Stretch" Margin="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100*"/>
+                    <ColumnDefinition Width="50*" FrameworkElement.FlowDirection="RightToLeft"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <TextBlock x:Name="tblk_Note"  TextWrapping="Wrap" HorizontalAlignment="Left" Text="{Binding Description}"  VerticalAlignment="Center" Grid.Column="0" Grid.Row="0"/>
+                <ToggleButton x:Name="btn_Note" Content="Add Note" HorizontalAlignment="Right"  Opacity="1"  Grid.Column=" 1" Margin="5,0,0,0" Grid.Row="0" VerticalAlignment="Top" Visibility="Hidden"/>
+                <DockPanel Grid.Column="0" Grid.Row="1" >
+                    <TextBlock x:Name="tblk_creator" Text="{Binding Createdby}" DockPanel.Dock="Left" FontSize="12" Foreground="Gray" Margin="2,0"/>
+                    <TextBlock x:Name="tblk_revision" Text="{Binding Revision}" DockPanel.Dock="Left" FontSize="12" Foreground="Gray" Margin="2,0"/>
+                    <!--<CheckBox x:Name="chkbx_selection" DockPanel.Dock="Right" Margin="2,0" IsChecked="{Binding IsSelected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>-->
+                </DockPanel>
+            </Grid>
+        </DataTemplate>
+
+    </Window.Resources>
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="200*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="tb_Title" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+            TextWrapping="Wrap" FontSize="48" Foreground="DarkBlue" HorizontalAlignment="Left" 
+>           <Run Text="clash" FontWeight="Bold" /><Run Text="analysis" FontFamily="Segoe" FontWeight="Light"/>
+        </TextBlock>
+
+        <Rectangle Grid.Row="1" Grid.ColumnSpan="3" Fill="DarkBlue" HorizontalAlignment="Stretch" Height="2"  VerticalAlignment="Center" Margin="0,4" />
+
+        <StackPanel Grid.Column="0" Grid.Row="2">
+            <ListBox FontWeight="UltraLight" FontSize="20" Margin="0,5" BorderThickness="0" Background="snow" IsEnabled="{Binding Visibility, ElementName=lv_Clashes}" Visibility="{Binding Visibility, ElementName=lv_Clashes}" >
+                <ListBoxItem>Inbox</ListBoxItem>
+                <ListBoxItem>Pinned</ListBoxItem>
+                <ListBoxItem>Done</ListBoxItem>
+            </ListBox>
+            <ListBox x:Name="lb_TypesofClashes" FontWeight="UltraLight" FontSize=" 20" Margin="0,5" BorderThickness="0" Background="Snow" SelectionMode="Multiple" Visibility="{Binding Visibility, ElementName=lv_Clashes}" >
+                <ListBoxItem>Contact</ListBoxItem>
+                <ListBoxItem>Clash</ListBoxItem>
+                <ListBoxItem>Clearance</ListBoxItem>
+            </ListBox>
+            <ListBox x:Name="lb_Priorities" FontWeight="UltraLight" FontSize=" 20" Margin="0,5" BorderThickness="0" Background="Snow" SelectionMode="Multiple" Visibility="{Binding Visibility, ElementName=lv_Clashes}"   >
+                <ListBoxItem>Priority 1</ListBoxItem>
+                <ListBoxItem>Priority 2</ListBoxItem>
+                <ListBoxItem>Priority 3</ListBoxItem>
+            </ListBox>
+
+        </StackPanel>
+
+        <TextBlock  x:Name="tblk_NewClash"  Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2"
+                Background="DarkBlue" Foreground="WhiteSmoke" FontWeight="Light" FontSize="20"
+                Text="start a new clash analysis" TextAlignment="Center" TextWrapping="WrapWithOverflow"
+                VerticalAlignment="Center" HorizontalAlignment="Center"  Padding="10" MouseDown="TextBlock_MouseDown"  >
+            
+        </TextBlock>
+
+            <ListView Margin="10" Name="lv_Clashes" Grid.Row="2" Grid.Column="1" FontSize="20" FontWeight="Light" Visibility="Collapsed" >
+                <ListView.View>
+                    <GridView >
+                        <GridViewColumn Header="Level" Width="60"  DisplayMemberBinding="{Binding Name}" />
+                        <GridViewColumn Header="Product 1" Width="90"  DisplayMemberBinding="{Binding Age}" />
+                        <GridViewColumn Header="Product 2" Width="90"  DisplayMemberBinding="{Binding Mail}" />
+                        <GridViewColumn Header="Type" Width="90"  DisplayMemberBinding="{Binding Mail}" />
+                        <GridViewColumn Header="Value" Width="90"  DisplayMemberBinding="{Binding Mail}" />
+                        <GridViewColumn Header="Status" Width="90"  DisplayMemberBinding="{Binding Mail}" />
+                    <GridViewColumn Header="Comment" Width="100"  DisplayMemberBinding="{Binding Mail}" />
+                </GridView>
+                </ListView.View>
+            </ListView>
+
+          
+
+    </Grid>
+</Window>
