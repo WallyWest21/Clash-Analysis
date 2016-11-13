@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet type="text/xsl" href="../Ressources/UnifiedStyleSheet_EN.xsl"?>
+<!DOCTYPE InterferenceElement SYSTEM "../Ressources/InterferenceGrammar.dtd">
+<InterferenceElement Version = "1.2" CATDocument = "C:\Users\Al\Dropbox\ESS\The Comparator\Nouveau dossier (2)\Product85.CATProduct" Responsible = "Al" FederatorFather = "..\sample.xml.xml"><Date Day = "28" Hour = "18" Year = "2016" Month = "2" Minute = "22" Second = "6"/><Interference Status = "NotInspected" NumInterf = "67" ResultType = "Contact" RetrieveInf = "New" ResultTypeNoNLS = "Contact"><Comment Value = ""/>
+<Product Alias = "NAS1149FN632P (NAS1149FN632P.3)" Preview = "../Picture/28_2_2016_18_22_9_Preview_First_67.png" ShapeName = "Shape 1" ProcessMode = "STANDALONE" ShapeSource = "C:\Users\Al\Dropbox\ESS\The Comparator\Nouveau dossier (2)\NAS1149FN632P.CATPart" DescriptionID = "B473299-501 --++-- NAS1149FN632P.3">
+<Matrix>
+<Vector Vx = "1.000000" Vy = "0.000016" Vz = "0.000000" CorrespondingData = "Rx"/>
+<Vector Vx = "-0.000016" Vy = "1.000000" Vz = "-0.000000" CorrespondingData = "Ry"/>
+<Vector Vx = "-0.000000" Vy = "0.000000" Vz = "1.000000" CorrespondingData = "Rz"/>
+<Point Ux = "-516.115479" Uy = "3019.070557" Uz = "10522.791992"/>
+</Matrix></Product>
+<Product Alias = "NAS601-7P (NAS601-7P.2)" Preview = "../Picture/28_2_2016_18_22_9_Preview_Second_67.png" ShapeName = "Shape 1" ProcessMode = "STANDALONE" ShapeSource = "C:\Users\Al\Dropbox\ESS\The Comparator\Nouveau dossier (2)\NAS601-7P.CATPart" DescriptionID = "B473299-501 --++-- NAS601-7P.2">
+<Matrix>
+<Vector Vx = "1.000000" Vy = "0.000016" Vz = "-0.000517" CorrespondingData = "Rx"/>
+<Vector Vx = "-0.000016" Vy = "1.000000" Vz = "0.000000" CorrespondingData = "Ry"/>
+<Vector Vx = "0.000517" Vy = "-0.000000" Vz = "1.000000" CorrespondingData = "Rz"/>
+<Point Ux = "-516.113464" Uy = "3019.070557" Uz = "10523.604492"/>
+</Matrix></Product>
+<GeometricAspect ExtractOrDistValue = "0 mm" IntersectCurveLength = "0 mm"/><Picture HRef = "../Picture/28_2_2016_18_22_9_67.png"/></Interference></InterferenceElement>

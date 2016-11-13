@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet type="text/xsl" href="../Ressources/UnifiedStyleSheet_EN.xsl"?>
+<!DOCTYPE InterferenceElement SYSTEM "../Ressources/InterferenceGrammar.dtd">
+<InterferenceElement Version = "1.2" CATDocument = "C:\Users\Al\Dropbox\ESS\The Comparator\Nouveau dossier (2)\Product85.CATProduct" Responsible = "Al" FederatorFather = "..\sample.xml.xml"><Date Day = "28" Hour = "18" Year = "2016" Month = "2" Minute = "22" Second = "6"/><Interference Status = "NotInspected" NumInterf = "42" ResultType = "Contact" RetrieveInf = "New" ResultTypeNoNLS = "Contact"><Comment Value = ""/>
+<Product Alias = "CDSP5905-08-13 (CDSP5905-08-13.5)" Preview = "../Picture/28_2_2016_18_22_8_Preview_First_42.png" ShapeName = "Shape 1" ProcessMode = "STANDALONE" ShapeSource = "C:\Users\Al\Dropbox\ESS\The Comparator\Nouveau dossier (2)\CDSP5905-08-13.CATPart" DescriptionID = "B473299-501 --++-- B473210-501 --++-- B473210-601.1 --++-- CDSP5905-08-13.5">
+<Matrix>
+<Vector Vx = "-0.204689" Vy = "0.000000" Vz = "-0.978827" CorrespondingData = "Rx"/>
+<Vector Vx = "-0.000000" Vy = "-1.000000" Vz = "-0.000000" CorrespondingData = "Ry"/>
+<Vector Vx = "-0.978827" Vy = "-0.000000" Vz = "0.204689" CorrespondingData = "Rz"/>
+<Point Ux = "-410.672791" Uy = "3153.829102" Uz = "11008.086914"/>
+</Matrix></Product>
+<Product Alias = "NAS514P832-6P (NAS514P832-6P.1.1)" Preview = "../Picture/28_2_2016_18_22_8_Preview_Second_42.png" ShapeName = "Shape 1" ProcessMode = "STANDALONE" ShapeSource = "C:\Users\Al\Dropbox\ESS\The Comparator\Nouveau dossier (2)\NAS514P832-6P.CATPart" DescriptionID = "B473299-501 --++-- NAS514P832-6P.1.1">
+<Matrix>
+<Vector Vx = "0.040906" Vy = "-0.979173" Vz = "0.198862" CorrespondingData = "Rx"/>
+<Vector Vx = "0.197287" Vy = "0.203026" Vz = "0.959092" CorrespondingData = "Ry"/>
+<Vector Vx = "-0.979492" Vy = "0.000000" Vz = "0.201483" CorrespondingData = "Rz"/>
+<Point Ux = "-413.915741" Uy = "3153.829102" Uz = "11008.760742"/>
+</Matrix></Product>
+<GeometricAspect ExtractOrDistValue = "0 mm" IntersectCurveLength = "0 mm"/><Picture HRef = "../Picture/28_2_2016_18_22_8_42.png"/></Interference></InterferenceElement>

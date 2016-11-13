@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Clash Analysis", "Clash Analysis\Clash Analysis.vbproj", "{CB257B51-D88A-4D18-9A6B-B4597E80B52B}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CATIA_Lib", "..\..\CATIA\CATIA_Lib\CATIA_Lib\CATIA_Lib.vbproj", "{C9F8E036-F16B-44DC-8B67-8B6857352060}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{CB257B51-D88A-4D18-9A6B-B4597E80B52B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CB257B51-D88A-4D18-9A6B-B4597E80B52B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CB257B51-D88A-4D18-9A6B-B4597E80B52B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9F8E036-F16B-44DC-8B67-8B6857352060}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9F8E036-F16B-44DC-8B67-8B6857352060}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9F8E036-F16B-44DC-8B67-8B6857352060}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9F8E036-F16B-44DC-8B67-8B6857352060}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

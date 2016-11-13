@@ -5,17 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Clash_Analysis"
         mc:Ignorable="d"
-        Title="Clash Analysis" Height="300" MinHeight="300"  MinWidth=" 300" Width="300"  Topmost="True" WindowStartupLocation="CenterScreen">
-
-    
+        Title="Clash Analysis" Height="350" MinHeight="350"  MinWidth=" 350" Width="350"  Topmost="True" WindowStartupLocation="CenterScreen">
 
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="100"/>
-            <ColumnDefinition Width="127*"/>
-            <ColumnDefinition Width="101*"/>
+            <ColumnDefinition Width="150*"/>
+            <ColumnDefinition Width="100*"/>
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
             <RowDefinition Height="10"/>
@@ -24,38 +23,69 @@
         </Grid.RowDefinitions>
 
         <TextBlock x:Name="tb_Title" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" 
-            TextWrapping="Wrap" FontSize="48" Foreground="DarkBlue" HorizontalAlignment="Left" Width="292" 
->           <Run Text="clash" FontWeight="Bold" /><Run Text="analysis" FontFamily="Segoe" FontWeight="UltraLight"/>
+            TextWrapping="Wrap" FontSize="48" Foreground="DarkBlue" FontFamily="Segoe" HorizontalAlignment="Left" Width="292" 
+>           <Run Text="clash" FontWeight="SemiBold" /><Run Text="analysis"  FontWeight="UltraLight"/>
         </TextBlock>
 
-        <Rectangle Grid.Row="1" Grid.ColumnSpan="3" Fill="DarkBlue" HorizontalAlignment="Stretch" Height="2"  VerticalAlignment="Center" Margin="0,4" />
+        <Rectangle Grid.Row="1" Grid.ColumnSpan="3" Fill="DarkBlue" HorizontalAlignment="Stretch" 
+                   Height="2"  VerticalAlignment="Center" Margin="0,4" />
 
         <StackPanel Grid.Column="0" Grid.Row="2" Grid.RowSpan="2">
-            <ListBox FontWeight="UltraLight" FontSize="20" Margin="0,5" BorderThickness="0" Background="snow" IsEnabled="{Binding Visibility, ElementName=lv_Clashes}" Visibility="{Binding Visibility, ElementName=lv_Clashes}" >
+            
+            <ListBox FontWeight="UltraLight" FontSize="20" Margin="0,5"
+                     BorderThickness="0" Background="snow" 
+                     IsEnabled="{Binding Visibility, ElementName=lv_Clashes}" 
+                     Visibility="{Binding Visibility, ElementName=lv_Clashes}">
                 <ListBoxItem>Inbox</ListBoxItem>
                 <ListBoxItem>Pinned</ListBoxItem>
                 <ListBoxItem>Done</ListBoxItem>
             </ListBox>
-            <ListBox x:Name="lb_TypesofClashes" FontWeight="UltraLight" FontSize=" 20" Margin="0,5" BorderThickness="0" Background="Snow" SelectionMode="Multiple" Visibility="{Binding Visibility, ElementName=lv_Clashes}" >
+            
+            <ListBox x:Name="lb_TypesofClashes" FontWeight="UltraLight" FontSize=" 20" Margin="0,5"
+                     BorderThickness="0" Background="Snow" SelectionMode="Multiple" 
+                     Visibility="{Binding Visibility, ElementName=lv_Clashes}">
                 <ListBoxItem>Contact</ListBoxItem>
                 <ListBoxItem>Clash</ListBoxItem>
                 <ListBoxItem>Clearance</ListBoxItem>
             </ListBox>
-            <ListBox x:Name="lb_Priorities" FontWeight="UltraLight" FontSize=" 20" Margin="0,5" BorderThickness="0" Background="Snow" SelectionMode="Multiple" Visibility="{Binding Visibility, ElementName=lv_Clashes}"   >
+            
+            <ListBox x:Name="lb_Priorities" FontWeight="UltraLight" FontSize=" 20" Margin="0,5" 
+                     BorderThickness="0" Background="Snow" SelectionMode="Multiple" 
+                     Visibility="{Binding Visibility, ElementName=lv_Clashes}">
                 <ListBoxItem Foreground="Crimson">Priority 1</ListBoxItem>
                 <ListBoxItem Foreground="DarkBlue">Priority 2</ListBoxItem>
                 <ListBoxItem Foreground="DarkGreen">Priority 3</ListBoxItem>
             </ListBox>
 
         </StackPanel>
+        
         <DataGrid Margin="10" Name="lv_Clashes" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"
                   FontSize="20" FontWeight="Light" Visibility="Hidden"
-                 AutoGenerateColumns="False" ItemsSource="{Binding}" >
+                 AutoGenerateColumns="False" ItemsSource="{Binding}" GridLinesVisibility="Horizontal" HorizontalGridLinesBrush="#FFE0DCDC" 
+                  AlternationCount="1" Padding="0,0,3,0" MinRowHeight="30" AlternatingRowBackground="#4CD3D3D3" Background="White" >
+
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <!--<Setter Property="BorderThickness" Value="20,0,0,0"></Setter>
+                    <Setter Property="BorderBrush" Value="DarkGreen" ></Setter>-->
+                    <Setter Property="Margin" Value="0,0,0,10" ></Setter>
+                </Style>
+            </DataGrid.RowStyle>
+
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Level}" Header="Level"/>
-                <DataGridTextColumn Binding="{Binding Product1}" Header="Product 1"/>
-                <DataGridTextColumn Binding="{Binding Product2}" Header="Product 2"/>
-                <DataGridTextColumn Binding="{Binding Value}" Header="Value"/>
+                <DataGridTemplateColumn Header="Priority">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Label Content="{Binding Priority}" HorizontalContentAlignment="Center"
+                                   BorderThickness="0,0,0,10" BorderBrush="{Binding PriorityColor}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                
+                <DataGridTextColumn Binding="{Binding Level}" Header="Level" Width="60" />
+                <DataGridTextColumn Binding="{Binding Product1}" Header="Product 1" Width="200"/>
+                <DataGridTextColumn Binding="{Binding Product2}" Header="Product 2" Width="200"/>
+                <DataGridTextColumn Binding="{Binding myValue}" Header="Value" />
                 <DataGridTextColumn Binding="{Binding Status}" Header="Status"/>
                 <DataGridTextColumn Binding="{Binding Comment}" Header="Comment"/>
 
@@ -67,7 +97,7 @@
                     <GroupStyle.HeaderTemplate>
                         <DataTemplate>
                             <StackPanel>
-                                <TextBlock Text="{Binding Path=Status}" />
+                                <TextBlock Text="{Binding Path=Name}" />
                             </StackPanel>
                         </DataTemplate>
                     </GroupStyle.HeaderTemplate>
@@ -79,9 +109,9 @@
                                         <Expander>
                                             <Expander.Header>
                                                 <StackPanel Orientation="Horizontal">
-                                                    <TextBlock Text="{Binding Path=Status}" />
-                                                    <TextBlock Text="{Binding Path=ItemCount}"/>
-                                                    <TextBlock Text=" Items"/>
+                                                    <TextBlock Text="{Binding Path=Name}" FontWeight="Bold" FontSize="24" Foreground="DarkBlue" VerticalAlignment="Center"/>
+                                                    <TextBlock Text="{Binding Path=ItemCount}" Margin="10,0,0,0" FontWeight="Light" VerticalAlignment="Center"/>
+                                                    <TextBlock Text=" Items" FontWeight="Light" VerticalAlignment="Center"/>
                                                 </StackPanel>
                                             </Expander.Header>
                                             <ItemsPresenter />
@@ -94,14 +124,24 @@
                 </GroupStyle>
             </DataGrid.GroupStyle>
 
-
-
-
             <DataGrid.RowDetailsTemplate>
-                <DataTemplate>
-                    <DockPanel Margin="10">
-                        <Image DockPanel.Dock="Left"  Height="150" Source="C:\Users\Al\Dropbox\Programming\Macro Catalog\Notes Manager\Notes Manager Icon.png"/>
-                        <TextBlock Text="THIS IS SOME DETAIL U HAVE"  DockPanel.Dock="Right" />
+                <DataTemplate x:Name="dt_ClashDetails">
+                    <DockPanel Margin="1,10,1,10" Background="White">
+                        <DockPanel.Effect>
+                            <DropShadowEffect RenderingBias="Quality"/>
+                        </DockPanel.Effect>
+                        <StackPanel DockPanel.Dock="Bottom" HorizontalAlignment="Stretch" Background="{Binding PriorityColor}" Height="10"/>
+                        <Image DockPanel.Dock="Left"  Height="150"  Source="{Binding PictureHRef}" Cursor="Hand" />
+                        <TextBlock Text="THIS IS SOME DETAIL U HAVE"  DockPanel.Dock="Left" />
+                        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" 
+                                    HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="30" FlowDirection="RightToLeft">
+                            <ToggleButton  x:Name="tgl_Done" Content="P" FontFamily="Wingdings 2" Margin="5,0"
+                                            BorderThickness="0" Click="tgl_Done_Click" BorderBrush="{x:Null}" Background="{x:Null}" />
+                            <DatePicker    Margin="5,0" IsDropDownOpen="False"/>
+                            <TextBlock Text =":Due Date"/>
+                            <ToggleButton  Content="Pin"  Margin="5,0" Click="tgl_Done_Click" 
+                                           Background="White"  BorderThickness="0"/>
+                        </StackPanel>
                     </DockPanel>
                 </DataTemplate>
             </DataGrid.RowDetailsTemplate>
@@ -110,7 +150,7 @@
                 <DataGridTextColumn x:Name="Cat_NumberColumn" Binding="{Binding Product1}" Header="cat Number" Width="SizeToHeader"/>
                 <DataGridTextColumn x:Name="Cat_NameColumn" Binding="{Binding Product2}" Header="cat Name" Width="SizeToHeader"/>
             </DataGrid.Columns>-->
-        
+
 
         </DataGrid>
         <!--<ListView Margin="10" Name="lv_Clashes" Grid.Row="2" Grid.Column="1" FontSize="20" FontWeight="Light" Visibility="Hidden" ItemsSource="{Binding}" Grid.ColumnSpan="2" Grid.RowSpan="1" >
@@ -136,26 +176,41 @@
         <TextBlock x:Name="tblk_ProductDocument" Grid.Column="2" TextWrapping="WrapWithOverflow" 
                    FontSize="20" FontWeight="Bold" Foreground="DarkBlue" 
                    VerticalAlignment="TOP" HorizontalAlignment="Right" Margin="0,0,10,0"/>
+        <StackPanel  x:Name="sp_Main" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3" VerticalAlignment="Center">
 
-        <TextBlock  x:Name="tblk_NewClash"  Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3"
+            <TextBlock  x:Name="tblk_InsideOneSelection" 
                 Background="DarkBlue" Foreground="WhiteSmoke" FontWeight="Light" FontSize="20"
-                Text="start a new clash analysis" TextAlignment="Center" TextWrapping="WrapWithOverflow"
-                VerticalAlignment="Center" HorizontalAlignment="Center"  Padding="10" MouseDown="TextBlock_MouseDown"  Height="50" Width="250" Margin="21,74,21,51"  />
+                Text="inside one selection" TextAlignment="Center" TextWrapping="WrapWithOverflow"
+                VerticalAlignment="Center" HorizontalAlignment="Center"  Padding="10" 
+                        MouseDown="TextBlock_MouseDown"  Width="250"  Margin="0,2.5" />
 
+            <TextBlock  x:Name="tblk_SelectAgainstAll" 
+                Background="DarkBlue" Foreground="WhiteSmoke" FontWeight="Light" FontSize="20"
+                Text="select against all" TextAlignment="Center" TextWrapping="WrapWithOverflow"
+                VerticalAlignment="Center" HorizontalAlignment="Center"  Padding="10" 
+                        MouseDown="TextBlock_MouseDown"   Width="250"  Margin="0,2.5" />
+
+            <TextBlock  x:Name="tblk_BetweenAllComponents" 
+                Background="DarkBlue" Foreground="WhiteSmoke" FontWeight="Light" FontSize="20"
+                Text="between all components" TextAlignment="Center" TextWrapping="WrapWithOverflow"
+                VerticalAlignment="Center" HorizontalAlignment="Center"  Padding="10" 
+                        MouseDown="TextBlock_MouseDown"   Width="250" Margin="0,2.5"  />
+
+            <TextBlock  x:Name="tblk_BetweenTwoComponents" 
+                Background="DarkBlue" Foreground="WhiteSmoke" FontWeight="Light" FontSize="20"
+                Text="between two components" TextAlignment="Center" TextWrapping="WrapWithOverflow"
+                VerticalAlignment="Center" HorizontalAlignment="Center"  Padding="10" 
+                MouseDown="TextBlock_MouseDown"   Width="250"   Margin="0,2.5"/>
+
+
+        </StackPanel>
         <StackPanel  x:Name="sp_StatusBar" Grid.Row="3" Grid.ColumnSpan="3" Background="DarkBlue"
-                    Height="25" Orientation="Horizontal" Visibility="Collapsed" >
+                    Height="25" Orientation="Horizontal" Visibility="Visible" >
 
-            <TextBlock Text="Click on the button to start a new clash" Foreground="White" VerticalAlignment="Center"/>
-            <Separator Width="15" Height="1" Background="White" RenderTransformOrigin="0.5,0.5" >
-                <Separator.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="90"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Separator.RenderTransform>
-            </Separator>
+            <TextBlock Text="Select the type of clash to perform" Foreground="White" VerticalAlignment="Center"/>
+            <Rectangle Width="1" Fill="White" Margin="3,3" Stroke="Black" StrokeThickness=".15">
+
+            </Rectangle>
 
         </StackPanel>
 

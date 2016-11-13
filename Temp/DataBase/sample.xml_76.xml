@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet type="text/xsl" href="../Ressources/UnifiedStyleSheet_EN.xsl"?>
+<!DOCTYPE InterferenceElement SYSTEM "../Ressources/InterferenceGrammar.dtd">
+<InterferenceElement Version = "1.2" CATDocument = "C:\Users\Al\Dropbox\CATIA\Table Set\Users\Al\Dropbox\CATIA\Recycling Stool\Top Assembly.CATProduct" Responsible = "Al" FederatorFather = "..\sample.xml.xml"><Date Day = "26" Hour = "12" Year = "2016" Month = "2" Minute = "45" Second = "7"/><Interference Status = "NotInspected" NumInterf = "76" ResultType = "Contact" RetrieveInf = "New" ResultTypeNoNLS = "Contact"><Comment Value = ""/>
+<Product Alias = "Seat (Part2.1)" Preview = "../Picture/26_2_2016_12_45_11_Preview_First_76.png" ShapeName = "Shape 1" ProcessMode = "STANDALONE" ShapeSource = "C:\Users\Al\Dropbox\CATIA\Table Set\Users\Al\Dropbox\CATIA\Hanging Chair\Part2.CATPart" DescriptionID = "Chair Assy.6 --++-- Part2.1">
+<Matrix>
+<Vector Vx = "-0.000000" Vy = "0.000000" Vz = "1.000000" CorrespondingData = "Rx"/>
+<Vector Vx = "-0.000000" Vy = "-1.000000" Vz = "0.000000" CorrespondingData = "Ry"/>
+<Vector Vx = "1.000000" Vy = "-0.000000" Vz = "0.000000" CorrespondingData = "Rz"/>
+<Point Ux = "964.682007" Uy = "46.109509" Uz = "378.459991"/>
+</Matrix></Product>
+<Product Alias = "Front Leg (Part3.1)" Preview = "../Picture/26_2_2016_12_45_11_Preview_Second_76.png" ShapeName = "Shape 1" ProcessMode = "STANDALONE" ShapeSource = "C:\Users\Al\Dropbox\CATIA\Table Set\Users\Al\Dropbox\CATIA\Hanging Chair\Part3.CATPart" DescriptionID = "Chair Assy.6 --++-- Part3.1">
+<Matrix>
+<Vector Vx = "-1.000000" Vy = "0.000000" Vz = "0.000000" CorrespondingData = "Rx"/>
+<Vector Vx = "-0.000000" Vy = "-1.000000" Vz = "0.000000" CorrespondingData = "Ry"/>
+<Vector Vx = "0.000000" Vy = "0.000000" Vz = "1.000000" CorrespondingData = "Rz"/>
+<Point Ux = "1368.541992" Uy = "44.839508" Uz = "0.000000"/>
+</Matrix></Product>
+<GeometricAspect ExtractOrDistValue = "0 mm" IntersectCurveLength = "0 mm"/><Picture HRef = "../Picture/26_2_2016_12_45_11_76.png"/></Interference></InterferenceElement>

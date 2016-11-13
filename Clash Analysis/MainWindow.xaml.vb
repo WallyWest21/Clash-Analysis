@@ -1,5 +1,6 @@
 ﻿Imports System.Windows.Media.Animation
 Imports System.Threading
+Imports System.Windows.Controls.Primitives
 
 Class MainWindow
     Dim CA As New CATIA_Lib.Cl_CATIA.UDF.ClashAnalysis
@@ -15,7 +16,8 @@ Class MainWindow
         'dg_Clashes.ItemsSource = NewList
     End Sub
     Private Sub TextBlock_MouseDown(sender As Object, e As MouseButtonEventArgs)
-        tblk_NewClash.Visibility = Visibility.Hidden
+        CA.ActiveProductClash()
+        sp_Main.Visibility = Visibility.Hidden
 
         Dim da As New DoubleAnimation
         'da.SetValue(win_BOMExport, HeightProperty) = 275
@@ -35,8 +37,8 @@ Class MainWindow
 
         Dim lcv As New ListCollectionView(ClashesList)
 
-        'lcv.GroupDescriptions.Add(New PropertyGroupDescription("Type"))
-        lcv.GroupDescriptions.Add(New PropertyGroupDescription("Status"))
+        lcv.GroupDescriptions.Add(New PropertyGroupDescription("Type"))
+        lcv.GroupDescriptions.Add(New PropertyGroupDescription("Priority"))
 
         'For Each item In lcv.ItemProperties
         '    MsgBox(item.Name)
@@ -66,7 +68,7 @@ Class MainWindow
         win_MainWindow.Width = 300
         win_MainWindow.Height = 300
 
-        tblk_NewClash.Visibility = Visibility.Visible
+        sp_Main.Visibility = Visibility.Visible
         lv_Clashes.Visibility = Visibility.Collapsed
 
         'Dim ClashesList = (From clash In CA.ListOfClashes
@@ -84,4 +86,23 @@ Class MainWindow
         Public Product1 As String, Product2 As String, ProductDocument As String, Type As String, Value As String, Status As String, Comment As String, Level As Integer
 
     End Class
+
+    Private Sub tgl_Done_Click(sender As Object, e As RoutedEventArgs)
+        Dim tgl As ToggleButton = CType(sender, ToggleButton)
+        tgl.Background = New SolidColorBrush(Colors.Transparent)
+
+        If tgl.IsChecked = True Then
+            tgl.Foreground = New SolidColorBrush(Colors.DarkGreen)
+            tgl.Background = New SolidColorBrush(Colors.Transparent)
+            tgl.FontWeight = FontWeights.Bold
+        Else
+            tgl.Foreground = New SolidColorBrush(Colors.Gray)
+            tgl.Background = New SolidColorBrush(Colors.Transparent)
+            tgl.FontWeight = FontWeights.Light
+        End If
+
+
+    End Sub
+
+
 End Class

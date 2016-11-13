@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet type="text/xsl" href="../Ressources/UnifiedStyleSheet_EN.xsl"?>
+<!DOCTYPE InterferenceElement SYSTEM "../Ressources/InterferenceGrammar.dtd">
+<InterferenceElement Version = "1.2" CATDocument = "C:\Users\Al\Dropbox\ESS\The Comparator\Nouveau dossier (2)\Product85.CATProduct" Responsible = "Al" FederatorFather = "..\sample.xml.xml"><Date Day = "28" Hour = "18" Year = "2016" Month = "2" Minute = "22" Second = "6"/><Interference Status = "NotInspected" NumInterf = "62" ResultType = "Contact" RetrieveInf = "New" ResultTypeNoNLS = "Contact"><Comment Value = ""/>
+<Product Alias = "B473299-1 (B473299-1)" Preview = "../Picture/28_2_2016_18_22_8_Preview_First_62.png" ShapeName = "Shape 1" ProcessMode = "STANDALONE" ShapeSource = "C:\Users\Al\Dropbox\ESS\The Comparator\Nouveau dossier (2)\B473299-1.CATPart" DescriptionID = "B473299-501 --++-- B473299-1">
+<Matrix>
+<Vector Vx = "1.000000" Vy = "0.000000" Vz = "0.000000" CorrespondingData = "Rx"/>
+<Vector Vx = "0.000000" Vy = "1.000000" Vz = "0.000000" CorrespondingData = "Ry"/>
+<Vector Vx = "0.000000" Vy = "0.000000" Vz = "1.000000" CorrespondingData = "Rz"/>
+<Point Ux = "-0.000657" Uy = "8.049953" Uz = "3.149074"/>
+</Matrix></Product>
+<Product Alias = "NAS1149FN632P (NAS1149FN632P.2)" Preview = "../Picture/28_2_2016_18_22_8_Preview_Second_62.png" ShapeName = "Shape 1" ProcessMode = "STANDALONE" ShapeSource = "C:\Users\Al\Dropbox\ESS\The Comparator\Nouveau dossier (2)\NAS1149FN632P.CATPart" DescriptionID = "B473299-501 --++-- NAS1149FN632P.2">
+<Matrix>
+<Vector Vx = "0.000000" Vy = "0.026164" Vz = "0.999658" CorrespondingData = "Rx"/>
+<Vector Vx = "0.000000" Vy = "-0.999658" Vz = "0.026164" CorrespondingData = "Ry"/>
+<Vector Vx = "1.000000" Vy = "-0.000000" Vz = "-0.000000" CorrespondingData = "Rz"/>
+<Point Ux = "-487.493561" Uy = "3028.984131" Uz = "10528.420898"/>
+</Matrix></Product>
+<GeometricAspect ExtractOrDistValue = "0 mm" IntersectCurveLength = "0 mm"/><Picture HRef = "../Picture/28_2_2016_18_22_8_62.png"/></Interference></InterferenceElement>

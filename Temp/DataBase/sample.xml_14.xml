@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet type="text/xsl" href="../Ressources/UnifiedStyleSheet_EN.xsl"?>
+<!DOCTYPE InterferenceElement SYSTEM "../Ressources/InterferenceGrammar.dtd">
+<InterferenceElement Version = "1.2" CATDocument = "C:\Users\Al\Dropbox\ESS\The Comparator\Nouveau dossier (2)\Product85.CATProduct" Responsible = "Al" FederatorFather = "..\sample.xml.xml"><Date Day = "28" Hour = "18" Year = "2016" Month = "2" Minute = "22" Second = "6"/><Interference Status = "Relevant" NumInterf = "14" ResultType = "Clash" RetrieveInf = "New" ResultTypeNoNLS = "Clash"><Comment Value = "Automatic filter : penetration less than "/>
+<Product Alias = "CDSP5905-06-13 (INSERT, BLIND THD  [1.1])" Preview = "../Picture/28_2_2016_18_22_7_Preview_First_14.png" ShapeName = "Shape 1" ProcessMode = "STANDALONE" ShapeSource = "C:\Users\Al\Dropbox\ESS\The Comparator\Nouveau dossier (2)\CDSP5905-06-13.CATPart" DescriptionID = "DOOR INSTALLATION, UPPER GALLEY --++-- DOOR ASSY  [1.1] --++-- PANEL ASSY  [1.1] --++-- INSERT, BLIND THD  [1.1]">
+<Matrix>
+<Vector Vx = "-0.101301" Vy = "0.000000" Vz = "-0.994856" CorrespondingData = "Rx"/>
+<Vector Vx = "-0.000000" Vy = "-1.000000" Vz = "-0.000000" CorrespondingData = "Ry"/>
+<Vector Vx = "-0.994856" Vy = "-0.000000" Vz = "0.101301" CorrespondingData = "Rz"/>
+<Point Ux = "-461.984558" Uy = "3422.395996" Uz = "10672.416016"/>
+</Matrix></Product>
+<Product Alias = "CDSP5905-06-13 (INSERT, BLIND THD  [1.1])" Preview = "../Picture/28_2_2016_18_22_7_Preview_Second_14.png" ShapeName = "Shape 1" ProcessMode = "STANDALONE" ShapeSource = "C:\Users\Al\Dropbox\ESS\The Comparator\Nouveau dossier (2)\CDSP5905-06-13.CATPart" DescriptionID = "DOOR INSTALLATION, UPPER GALLEY --++-- DOOR ASSY  [1.1] --++-- Product1.1 --++-- INSERT, BLIND THD  [1.1]">
+<Matrix>
+<Vector Vx = "-0.101301" Vy = "0.000000" Vz = "-0.994856" CorrespondingData = "Rx"/>
+<Vector Vx = "-0.000000" Vy = "-1.000000" Vz = "-0.000000" CorrespondingData = "Ry"/>
+<Vector Vx = "-0.994856" Vy = "-0.000000" Vz = "0.101301" CorrespondingData = "Rz"/>
+<Point Ux = "-461.984558" Uy = "3422.395996" Uz = "10672.416016"/>
+</Matrix></Product>
+<GeometricAspect ExtractOrDistValue = "-0.405in" IntersectCurveLength = "0in"><Point Ux = "-17.986in" Uy = "134.74in" Uz = "420.153in"/><Point Ux = "-18.389in" Uy = "134.74in" Uz = "420.194in"/></GeometricAspect><Picture HRef = "../Picture/28_2_2016_18_22_7_14.png"/></Interference></InterferenceElement>

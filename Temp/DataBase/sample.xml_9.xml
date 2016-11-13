@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet type="text/xsl" href="../Ressources/UnifiedStyleSheet_EN.xsl"?>
+<!DOCTYPE InterferenceElement SYSTEM "../Ressources/InterferenceGrammar.dtd">
+<InterferenceElement Version = "1.2" CATDocument = "C:\Users\Al\Dropbox\ESS\The Comparator\Nouveau dossier (2)\Product85.CATProduct" Responsible = "Al" FederatorFather = "..\sample.xml.xml"><Date Day = "28" Hour = "18" Year = "2016" Month = "2" Minute = "22" Second = "6"/><Interference Status = "NotInspected" NumInterf = "9" ResultType = "Contact" RetrieveInf = "New" ResultTypeNoNLS = "Contact"><Comment Value = ""/>
+<Product Alias = "B473158-1 (DOOR PANEL  [1.1])" Preview = "../Picture/28_2_2016_18_22_7_Preview_First_9.png" ShapeName = "Shape 1" ProcessMode = "STANDALONE" ShapeSource = "C:\Users\Al\Dropbox\ESS\The Comparator\Nouveau dossier (2)\B473158-1.CATPart" DescriptionID = "DOOR INSTALLATION, UPPER GALLEY --++-- DOOR ASSY  [1.1] --++-- PANEL ASSY  [1.1] --++-- DOOR PANEL  [1.1]">
+<Matrix>
+<Vector Vx = "1.000000" Vy = "0.000000" Vz = "0.000000" CorrespondingData = "Rx"/>
+<Vector Vx = "0.000000" Vy = "1.000000" Vz = "0.000000" CorrespondingData = "Ry"/>
+<Vector Vx = "0.000000" Vy = "0.000000" Vz = "1.000000" CorrespondingData = "Rz"/>
+<Point Ux = "-0.009044" Uy = "0.000000" Uz = "0.002892"/>
+</Matrix></Product>
+<Product Alias = "B473158-7 (DECOR, LAMINATE  [1.1])" Preview = "../Picture/28_2_2016_18_22_7_Preview_Second_9.png" ShapeName = "Shape 1" ProcessMode = "STANDALONE" ShapeSource = "C:\Users\Al\Dropbox\ESS\The Comparator\Nouveau dossier (2)\B473158-7.CATPart" DescriptionID = "DOOR INSTALLATION, UPPER GALLEY --++-- DOOR ASSY  [1.1] --++-- DECOR, LAMINATE  [1.1]">
+<Matrix>
+<Vector Vx = "1.000000" Vy = "0.000000" Vz = "0.000000" CorrespondingData = "Rx"/>
+<Vector Vx = "0.000000" Vy = "1.000000" Vz = "0.000000" CorrespondingData = "Ry"/>
+<Vector Vx = "0.000000" Vy = "0.000000" Vz = "1.000000" CorrespondingData = "Rz"/>
+<Point Ux = "-0.009044" Uy = "0.000000" Uz = "0.002892"/>
+</Matrix></Product>
+<GeometricAspect ExtractOrDistValue = "0 mm" IntersectCurveLength = "0 mm"/><Picture HRef = "../Picture/28_2_2016_18_22_7_9.png"/></Interference></InterferenceElement>
