@@ -16,7 +16,11 @@ Class MainWindow
         'dg_Clashes.ItemsSource = NewList
     End Sub
     Private Sub TextBlock_MouseDown(sender As Object, e As MouseButtonEventArgs)
-        CA.ActiveProductClash()
+
+        'If sender.name = "tblk_InsideOneSelection" Then CA.ActiveProductClash()
+        'If sender.name = "tblk_SelectAgainstAll" Then CA.OneAgainstAll()
+
+        CA.OneAgainstAll()
         sp_Main.Visibility = Visibility.Hidden
 
         Dim da As New DoubleAnimation
